@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register — Blog</title>
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+    <div class="auth-card">
+        <h1>Create Account</h1>
+        <p class="subtitle">Join the Blog and start exploring</p>
+        <% if (typeof error !=='undefined' && error) { %>
+            <p class="error-msg"><%= error %></p>
+        <% } %>
+        <form action="/register" method="post">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Choose a username" name="username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password" name="password">
+            </div>
+            <button>Create Account</button>
+        </form>
+        <div class="auth-footer">
+            Already have an account? <a href="/login">Sign in</a>
+        </div>
+    </div>
+</body>
+
+</html>

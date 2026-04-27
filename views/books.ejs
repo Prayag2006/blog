@@ -1,0 +1,18 @@
+
+    <%- include('navbar') %>
+
+    <h1 class="title">Read Our Blog Posts</h1>
+    <div class="container">
+        <% books.forEach((b)=>{ %>
+            <div class="card">
+                <img src="<%= b.image %>" alt="<%= b.title %>">
+                <div class="card-content">
+                    <h3><%= b.title %></h3>
+                    <p><%= b.description %></p>
+                    <p class="meta">₹<%= b.price %> · <%= b.author %></p>
+                    <p style="font-size:12px; color:#6b6b80; margin-bottom:14px;">Published: <%= b.publish_date %></p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        <% }); %>
+    </div>

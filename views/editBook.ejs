@@ -1,0 +1,11 @@
+<%- include('header',{title:"Update Post"}) %>
+    <form class="edit-form" action="/edit/<%= book.id %>" method="POST">
+        <h1>Update Post</h1>
+        <input type="text" name="title" value="<%= book.title %>">
+        <input type="text" name="description" value="<%= book.description %>">
+        <input type="text" name="image" value="<%= book.image %>">
+        <input type="text" name="price" value="<%= book.price %>">
+        <input type="text" name="publish_date" value="<%= book.publish_date %>">
+        <input type="text" name="author" value="<%= book.author %>">
+        <input type="submit" class="submit-btn">
+    </form>
